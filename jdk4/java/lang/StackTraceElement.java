@@ -8,6 +8,8 @@
 package java.lang;
 
 /**
+ * 由VM初始化,主要是堆信息
+ * 这个类的主要作用就是事定位到堆报错的信息.
  * An element in a stack trace, as returned by {@link
  * Throwable#getStackTrace()}.  Each element represents a single stack frame.
  * All stack frames except for the one at the top of the stack represent
@@ -21,12 +23,13 @@ package java.lang;
  */
 public final class StackTraceElement implements java.io.Serializable {
     // Initialized by VM
-    private String declaringClass;
-    private String methodName;
-    private String fileName;
-    private int    lineNumber;
+    private String declaringClass;//类名
+    private String methodName;//方法名
+    private String fileName;//文件名
+    private int    lineNumber;//行数
 
     /**
+     * 私有化构造方法,只有虚拟机能调用
      * Prevent inappropriate instantiation.  Only the VM creates these.
      * It creates them "magically" without invoking this constructor.
      */

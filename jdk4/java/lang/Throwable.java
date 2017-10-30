@@ -131,11 +131,13 @@ public class Throwable implements Serializable {
     private static final long serialVersionUID = -3042686055658047285L;
 
     /**
+     * transient关键字可以让此类不序列化
      * Native code saves some indication of the stack backtrace in this slot.
      */
     private transient Object backtrace; 
 
     /**
+     * 记录特殊的信息
      * Specific details about the Throwable.  For example, for
      * <tt>FileNotFoundException</tt>, this contains the name of
      * the file that could not be found.
@@ -145,6 +147,7 @@ public class Throwable implements Serializable {
     private String detailMessage;
 
     /**
+     * ???
      * The throwable that caused this throwable to get thrown, or null if this
      * throwable was not caused by another throwable, or if the causative
      * throwable is unknown.  If this field is equal to this throwable itself,
