@@ -23,7 +23,7 @@ package java.lang;
  */
 public final class StackTraceElement implements java.io.Serializable {
     // Initialized by VM
-    private String declaringClass;//类名
+    private String declaringClass;//类名111
     private String methodName;//方法名
     private String fileName;//文件名
     private int    lineNumber;//行数
