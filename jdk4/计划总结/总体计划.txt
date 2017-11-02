@@ -1,0 +1,18 @@
+java
+	lang(提供java语言程序设计的基础类)
+		--基础类
+			Object
+		--包装类
+		--异常类
+		--工具相关类
+	util
+	beans
+	io
+	rmi
+	math
+	net
+	nio
+	security
+	sql
+	text
+	math

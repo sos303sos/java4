@@ -1,5 +1,5 @@
 /*
- * @(#)StackTraceElement.java	1.7 03/01/23
+ * @(#)StackTraceElement.java   1.7 03/01/23
  *
  * Copyright 2003 Sun Microsystems, Inc. All rights reserved.
  * SUN PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
@@ -8,8 +8,8 @@
 package java.lang;
 
 /**
- * ÓÉVM³õÊ¼»¯,Ö÷ÒªÊÇ¶ÑĞÅÏ¢
- * Õâ¸öÀàµÄÖ÷Òª×÷ÓÃ¾ÍÊÇÊÂ¶¨Î»µ½¶Ñ±¨´íµÄĞÅÏ¢.
+ * ç”±VMåˆå§‹åŒ–,ä¸»è¦æ˜¯å †ä¿¡æ¯
+ * è¿™ä¸ªç±»çš„ä¸»è¦ä½œç”¨å°±æ˜¯äº‹å®šä½åˆ°å †æŠ¥é”™çš„ä¿¡æ¯.
  * An element in a stack trace, as returned by {@link
  * Throwable#getStackTrace()}.  Each element represents a single stack frame.
  * All stack frames except for the one at the top of the stack represent
@@ -23,13 +23,13 @@ package java.lang;
  */
 public final class StackTraceElement implements java.io.Serializable {
     // Initialized by VM
-    private String declaringClass;//ÀàÃû111
-    private String methodName;//·½·¨Ãû
-    private String fileName;//ÎÄ¼şÃû
-    private int    lineNumber;//ĞĞÊı
+    private String declaringClass;//ç±»å111
+    private String methodName;//æ–¹æ³•å
+    private String fileName;//æ–‡ä»¶å
+    private int    lineNumber;//è¡Œæ•°
 
     /**
-     * Ë½ÓĞ»¯¹¹Ôì·½·¨,Ö»ÓĞĞéÄâ»úÄÜµ÷ÓÃ
+     * ç§æœ‰åŒ–æ„é€ æ–¹æ³•,åªæœ‰è™šæ‹Ÿæœºèƒ½è°ƒç”¨
      * Prevent inappropriate instantiation.  Only the VM creates these.
      * It creates them "magically" without invoking this constructor.
      */

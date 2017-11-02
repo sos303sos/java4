@@ -64,7 +64,7 @@ import java.util.Random;
  * @since   JDK1.0
  */
 
-public final strictfp class Math {
+public final strictfp class Math {//strictfp 猜测是各种环境的虚拟机得到的结果不一致,但是还是不精确的结果
 
     /**
      * Don't let anyone instantiate this class.

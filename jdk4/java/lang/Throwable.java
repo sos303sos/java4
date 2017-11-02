@@ -1,5 +1,5 @@
 /*
- * @(#)Throwable.java	1.51 03/01/23
+ * @(#)Throwable.java   1.51 03/01/23
  *
  * Copyright 2003 Sun Microsystems, Inc. All rights reserved.
  * SUN PROPRIETARY/CONFIDENTIAL. Use is subject to license terms.
@@ -131,13 +131,13 @@ public class Throwable implements Serializable {
     private static final long serialVersionUID = -3042686055658047285L;
 
     /**
-     * transient¹Ø¼ü×Ö¿ÉÒÔÈÃ´ËÀà²»ĞòÁĞ»¯
+     * transientå…³é”®å­—å¯ä»¥è®©æ­¤ç±»ä¸åºåˆ—åŒ–
      * Native code saves some indication of the stack backtrace in this slot.
      */
     private transient Object backtrace; 
 
     /**
-     * ¼ÇÂ¼ÌØÊâµÄĞÅÏ¢
+     * è®°å½•ç‰¹æ®Šçš„ä¿¡æ¯
      * Specific details about the Throwable.  For example, for
      * <tt>FileNotFoundException</tt>, this contains the name of
      * the file that could not be found.
@@ -256,6 +256,7 @@ public class Throwable implements Serializable {
     }
 
     /**
+     * æœ¬ç±»è¿”å›çš„æ˜¯ä¸€æ ·çš„,ç»™å­ç±»ä½¿ç”¨
      * Creates a localized description of this throwable.
      * Subclasses may override this method in order to produce a
      * locale-specific message.  For subclasses that do not override this
@@ -270,6 +271,7 @@ public class Throwable implements Serializable {
     }
 
     /**
+     * ???
      * Returns the cause of this throwable or <code>null</code> if the
      * cause is nonexistent or unknown.  (The cause is the throwable that
      * caused this throwable to get thrown.)

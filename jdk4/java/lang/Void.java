@@ -8,6 +8,7 @@
 package java.lang;
 
 /**
+ * 主要目的猜测是为了给类型提供了一种判断的方法
  * The Void class is an uninstantiable placeholder class to hold a
  * reference to the Class object representing the Java keyword
  * void.
