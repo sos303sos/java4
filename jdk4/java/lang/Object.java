@@ -18,7 +18,7 @@ package java.lang;
  * @since   JDK1.0
  */
 public class Object {
-
+    //涉及到本地方法的注册
     private static native void registerNatives();
     static {
         registerNatives();

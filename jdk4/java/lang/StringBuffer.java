@@ -8,6 +8,10 @@
 package java.lang;
 
 /**
+ * String和StringBuffer都是CharSequence的一种实现,注意StringBuffer是没有实现Comparable接口的
+ * StringBuffer是线程安全的
+ * x = "a" + 4 + "c" <=> x = new StringBuffer().append("a").append(4).append("c").toString()
+ * 
  * A string buffer implements a mutable sequence of characters. 
  * A string buffer is like a {@link String}, but can be modified. At any 
  * point in time it contains some particular sequence of characters, but 

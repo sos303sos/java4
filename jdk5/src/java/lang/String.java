@@ -20,6 +20,7 @@ import java.util.regex.PatternSyntaxException;
 
 
 /**
+ * String类之所以是不可变对象,是因为其私有变量都是final的,所有String才是不可变对象
  * The <code>String</code> class represents character strings. All
  * string literals in Java programs, such as <code>"abc"</code>, are
  * implemented as instances of this class.

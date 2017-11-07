@@ -1,10 +1,19 @@
 java
 	lang(提供java语言程序设计的基础类)
 		--基础类
-			Object
+			Object  所有类的超类,提供 equals,getClass以及线程相关的通用方法
 		--包装类
+			Boolean
+			..Byte
+			Double
+			Character 略
+			CharSequence --char序列的接口
+			
+			FloatingDecimal  处理浮点数相关的工具类
 		--异常类
 		--工具相关类
+			Comparable  可以比较的接口,常用于集合类
+			String 设计为不可变类,好处多多
 	util
 	beans
 	io

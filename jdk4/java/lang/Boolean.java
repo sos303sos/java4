@@ -8,6 +8,7 @@
 package java.lang;
 
 /**
+ * 提供常量,以及其他和Boolean类之间互相转换
  * The Boolean class wraps a value of the primitive type 
  * <code>boolean</code> in an object. An object of type 
  * <code>Boolean</code> contains a single field whose type is 

@@ -19,6 +19,16 @@ import java.util.regex.PatternSyntaxException;
 
 
 /**
+ * String是不可变对象,在jdk 1.5之中才变成了不可变对象的,所有的子方法都是采用的new String...这种方式进行返回的
+ * 
+ * 解释一下String类的设计:
+ * 1.String类为什么被设计为final?
+ *      1)因为不希望String类被继承,substring返回的是..new String("")   如果被继承,可能返回的就是..,会破坏辛辛苦苦创造的封装性,
+ *      既然敢设计成为final,也从侧面反映出来工程师认为此String类提供的方法能满足大家对于字符串的方法的满足
+ *      2)不可变类一定是线程安全的
+ *      3)不可变类代表了引用安全,那么作为map(key,value)中的key 就不会变化,而引起歧义
+ *      4)常量池,因为String是常量,使用常量池性能会更好,好像是jdk1.6默认的常量池
+ * 
  * The <code>String</code> class represents character strings. All
  * string literals in Java programs, such as <code>"abc"</code>, are
  * implemented as instances of this class.
@@ -2279,6 +2289,9 @@ public final class String
     }
 
     /**
+     * http://www.cnblogs.com/wxgblogs/p/5635099.html
+     * new String("q")  在java heap和perm space中都会创建 使用intern()方法后 "abc".intern() 会直接返回常量区的内容,但是jdk1.7之前的常量区都是固定大小的 
+     * 如果一直调用intern,数量查过一定值,可能反而会导致性能变慢
      * Returns a canonical representation for the string object.
      * <p>
      * A pool of strings, initially empty, is maintained privately by the
