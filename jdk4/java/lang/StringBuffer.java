@@ -10,6 +10,8 @@ package java.lang;
 /**
  * String和StringBuffer都是CharSequence的一种实现,注意StringBuffer是没有实现Comparable接口的
  * StringBuffer是线程安全的
+ * StringBuffer因为是可变的,所以涉及到改变容量的,都统一调用同一个方法进行扩容.
+ * append在进行添加数据的时候,会判断,如果不超过既定的长度不动,如果超过了 就进行扩容
  * x = "a" + 4 + "c" <=> x = new StringBuffer().append("a").append(4).append("c").toString()
  * 
  * A string buffer implements a mutable sequence of characters. 

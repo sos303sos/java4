@@ -9,6 +9,8 @@ package java.lang;
 import  java.io.*;
 
 /**
+ * 所有异常错误的超类
+ * 
  * The <code>Throwable</code> class is the superclass of all errors and
  * exceptions in the Java language. Only objects that are instances of this
  * class (or one of its subclasses) are thrown by the Java Virtual Machine or
@@ -131,7 +133,7 @@ public class Throwable implements Serializable {
     private static final long serialVersionUID = -3042686055658047285L;
 
     /**
-     * transient关键字可以让此类不序列化
+     * transient关键字可以让此属性不序列化
      * Native code saves some indication of the stack backtrace in this slot.
      */
     private transient Object backtrace; 

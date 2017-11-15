@@ -37,6 +37,10 @@ import sun.reflect.Reflection;
 import sun.security.util.SecurityConstants;
 
 /**
+ * 抽象类
+ * 一般是把全限定名->文件路径名->读.class文件,还有一种方式是读取网络字节码(不是文件形式,猜测是流)
+ * 
+ * -
  * A class loader is an object that is responsible for loading classes. The
  * class <tt>ClassLoader</tt> is an abstract class.  Given the name of a
  * class, a class loader should attempt to locate or generate data that

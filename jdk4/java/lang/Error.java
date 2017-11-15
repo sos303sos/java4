@@ -8,6 +8,8 @@
 package java.lang;
 
 /**
+ * Error一般不应该try catch,大多数都是反常的情况.
+ * 
  * An <code>Error</code> is a subclass of <code>Throwable</code> 
  * that indicates serious problems that a reasonable application 
  * should not try to catch. Most such errors are abnormal conditions. 

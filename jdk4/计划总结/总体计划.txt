@@ -2,6 +2,7 @@ java
 	lang(提供java语言程序设计的基础类)
 		--基础类
 			Object  所有类的超类,提供 equals,getClass以及线程相关的通用方法
+			ClassLoader 类加载器
 		--包装类
 			Boolean
 			..Byte
@@ -11,9 +12,55 @@ java
 			
 			FloatingDecimal  处理浮点数相关的工具类
 		--异常类
+			Throwable
+				-Error																--不需要cry catch
+					--LinkageError  											--貌似都是虚拟机加载不到文件中的相关东西
+						---IncompatibleClassChangeError
+							----AbstractMethodError
+							----IllegalAccessError  							--修改或者访问没有权限的属性有关
+							----InstantiationError 							--实例化错误(new接口或者抽象类)
+							----NoSuchFieldError 							--找不到属性异常
+							----NoSuchMethodError 						--找不到方法异常
+						---ClassFormatError
+							----UnsupportedClassVersionError		--最大最小版本号是否支持
+						---NoClassDefFoundError 						--虚拟机加载不到类
+						---UnsatisfiedLinkError  							--找不到本地方法的连接异常
+					AssertionError  												--断言失败错误
+					VirtualMachineError 										--虚拟机异常
+						InternalError 											--虚拟机内部的异常
+						OutOfMemoryError 									--内存溢出异常
+						StackOverflowError 									--堆栈溢出异常
+						UnknownError
+				-Exception
+					--RuntimeException										--运行时异常
+						---NullPointerException
+						---ArithmeticException								--算数异常
+						---IndexOutOfBoundsException				--越界异常
+							----ArrayIndexOutOfBoundsException	--数组越界
+							----StringIndexOutOfBoundsException
+						---ArrayStoreException								--数组存储异常
+						---ClassCastException			
+						---IllegalMonitorStateException
+						---IllegalStateException
+						---NegativeArraySizeException
+						---SecurityException
+						---UnsupportedOperationException
+					--ClassNotFoundException
+					--CloneNotSupportedException
+					--IllegalAccessException								--反射创建一个类异常
+					--IllegalArgumentException							--参数不正确
+						---IllegalThreadStateException
+						---NumberFormatException
+					--InstantiationException
+					--InterruptedException
+					--NoSuchFieldException
+					--NoSuchMethodException
+					
 		--工具相关类
 			Comparable  可以比较的接口,常用于集合类
-			String 设计为不可变类,好处多多
+			CharSequence
+				String 设计为不可变类,好处多多
+				StringBuffer
 	util
 	beans
 	io

@@ -28,6 +28,7 @@ import java.util.regex.PatternSyntaxException;
  *      2)不可变类一定是线程安全的
  *      3)不可变类代表了引用安全,那么作为map(key,value)中的key 就不会变化,而引起歧义
  *      4)常量池,因为String是常量,使用常量池性能会更好,好像是jdk1.6默认的常量池
+ *      5)方法都设计成final是因为工程师的书写习惯
  * 
  * The <code>String</code> class represents character strings. All
  * string literals in Java programs, such as <code>"abc"</code>, are

@@ -8,6 +8,10 @@
 package java.lang;
 
 /**
+ * 应用程序尝试访问或者修改属性或者访问一个没有权限的方法
+ * 
+ * 通常,异常由编译器捕获.这个异常只能发生在类定义不正确的改变
+ * 
  * Thrown if an application attempts to access or modify a field, or 
  * to call a method that it does not have access to. 
  * <p>

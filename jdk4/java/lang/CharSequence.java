@@ -9,7 +9,7 @@ package java.lang;
 
 
 /**
- * char集合
+ * char[],两种常见实现类String(不可变类),StringBuffer
  * A <tt>CharSequence</tt> is a readable sequence of characters.  This
  * interface provides uniform, read-only access to many different kinds of
  * character sequences.

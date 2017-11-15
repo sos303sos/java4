@@ -8,6 +8,7 @@
 package java.lang;
 
 /**
+ * 虚拟机挂掉时候的异常
  * Thrown to indicate that the Java Virtual Machine is broken or has 
  * run out of resources necessary for it to continue operating. 
  *
