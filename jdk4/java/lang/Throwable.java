@@ -9,7 +9,7 @@ package java.lang;
 import  java.io.*;
 
 /**
- * 所有异常错误的超类
+ * 所有异常错误的超类(不是接口),只有这个类的实例才有可能是被java 虚拟机捕获
  * 
  * The <code>Throwable</code> class is the superclass of all errors and
  * exceptions in the Java language. Only objects that are instances of this
@@ -17,13 +17,13 @@ import  java.io.*;
  * can be thrown by the Java <code>throw</code> statement. Similarly, only
  * this class or one of its subclasses can be the argument type in a
  * <code>catch</code> clause.
- * 
+ * 两个子类 Error和Exception
  * <p>Instances of two subclasses, {@link java.lang.Error} and 
  * {@link java.lang.Exception}, are conventionally used to indicate 
  * that exceptional situations have occurred. Typically, these instances 
  * are freshly created in the context of the exceptional situation so 
  * as to include relevant information (such as stack trace data).
- * 
+ * throwable会包含线程stack的快照,链式异常
  * <p>A throwable contains a snapshot of the execution stack of its thread at
  * the time it was created. It can also contain a message string that gives
  * more information about the error. Finally, it can contain a <i>cause</i>:
@@ -31,7 +31,7 @@ import  java.io.*;
  * facility is new in release 1.4.  It is also known as the <i>chained
  * exception</i> facility, as the cause can, itself, have a cause, and so on,
  * leading to a "chain" of exceptions, each caused by another.
- *
+ * 异常必须要有原因是因为上层的异常可能是因为底层异常原因造成的,如果底层不提供异常原因,上层就没有办法知道具体的原因,没有办法了解办法,可以针对不同的底层异常进行处理.
  * <p>One reason that a throwable may have a cause is that the class that
  * throws it is built atop a lower layered abstraction, and an operation on
  * the upper layer fails due to a failure in the lower layer.  It would be bad
@@ -45,7 +45,7 @@ import  java.io.*;
  * the flexibility to change the implementation of the upper layer without
  * changing its API (in particular, the set of exceptions thrown by its
  * methods).
- *
+ * 异常必须要抛出,还有一点原因:指出相关接口等会有哪些异常.
  * <p>A second reason that a throwable may have a cause is that the method
  * that throws it must conform to a general-purpose interface that does not
  * permit the method to throw the cause directly.  For example, suppose
@@ -58,7 +58,7 @@ import  java.io.*;
  * <tt>IOException</tt> in an appropriate unchecked exception.  (The
  * specification for the persistent collection should indicate that it is
  * capable of throwing such exceptions.)
- *
+ * 两种方式进行原因设置:new的参数 以及 initCause方法
  * <p>A cause can be associated with a throwable in two ways: via a
  * constructor that takes the cause as an argument, or via the
  * {@link #initCause(Throwable)} method.  New throwable classes that

@@ -7,7 +7,7 @@
 
 package java.lang.reflect;
 
-/**
+/**居然是一个反射类.... 实现其实就是数据结构的一种
  * The <code>Array</code> class provides static methods to dynamically create and
  * access Java arrays.
  *
@@ -21,11 +21,11 @@ public final
 class Array {
 
     /**
-     * Constructor.  Class Array is not instantiable.
+     * Constructor.  Class Array is not instantiable.构造方法事私有的,不允许实例化
      */
     private Array() {}
 
-    /**
+    /**实例化一个数组
      * Creates a new array with the specified component type and
      * length.
      * Invoking this method is equivalent to creating an array

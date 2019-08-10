@@ -121,7 +121,7 @@ public class Object {
 	return (this == obj);
     }
 
-    /**
+    /**这个clone只是浅克隆 就是地址克隆,要实现深度克隆,可以使用流或者序列化等复制
      * Creates and returns a copy of this object.  The precise meaning 
      * of "copy" may depend on the class of the object. The general 
      * intent is that, for any object <tt>x</tt>, the expression:
@@ -181,7 +181,7 @@ public class Object {
      */
     protected native Object clone() throws CloneNotSupportedException;
 
-    /**
+    /**类名+hashcode
      * Returns a string representation of the object. In general, the 
      * <code>toString</code> method returns a string that 
      * "textually represents" this object. The result should 

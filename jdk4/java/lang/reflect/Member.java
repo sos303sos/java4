@@ -7,7 +7,7 @@
 
 package java.lang.reflect;
 
-/**
+/**字符 方法 构造函数的抽象类
  * Member is an interface that reflects identifying information about
  * a single member (a field or a method) or a constructor.
  *
