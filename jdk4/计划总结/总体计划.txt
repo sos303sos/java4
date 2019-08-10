@@ -1,7 +1,11 @@
 java
 	lang(提供java语言程序设计的基础类)
 		--基础类
-			Object  所有类的超类,提供 equals,getClass以及线程相关的通用方法
+			Object  所有类的超类
+						getClass()  			---- 对象属于哪个类
+						equals()   hashCode()	---- 对象是不是一样的呢
+						toString()				---- 类+hashCode
+						..wait()等
 			ClassLoader 类加载器
 		--包装类
 			Boolean
@@ -9,8 +13,10 @@ java
 			Double
 			Character 略
 			CharSequence --char序列的接口
-			
 			FloatingDecimal  处理浮点数相关的工具类
+		--reflect反射类
+			Member		field,method,constructor的接口
+			Array       
 		--异常类
 			Throwable
 				-Error																--不需要cry catch
