@@ -1,4 +1,5 @@
 /*
+
  * @(#)HashSet.java	1.33 03/12/19
  *
  * Copyright 2004 Sun Microsystems, Inc. All rights reserved.
